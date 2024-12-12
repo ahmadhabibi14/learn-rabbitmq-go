@@ -6,8 +6,8 @@ services:
       - "5672:5672"
       - "15672:15672"
     environment:
-      RABBITMQ_DEFAULT_USER: "habi"
-      RABBITMQ_DEFAULT_PASS: "habi1234"
+      RABBITMQ_DEFAULT_USER: "express"
+      RABBITMQ_DEFAULT_PASS: "express1234"
     volumes:
       - ./docker/rabbitmq:/var/lib/rabbitmq
     networks:
