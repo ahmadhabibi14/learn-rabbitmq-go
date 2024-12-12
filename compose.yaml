@@ -1,0 +1,18 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4.0.4-management-alpine
+    container_name: rabbitmq-msg
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "habi"
+      RABBITMQ_DEFAULT_PASS: "habi1234"
+    volumes:
+      - ./docker/rabbitmq:/var/lib/rabbitmq
+    networks:
+      - rabbitmq-net
+
+networks:
+  rabbitmq-net:
+    name: rabbitmq-net
